@@ -47,7 +47,7 @@ Relevant fields in the response:
 
 ### 1. Search Books
 - `GET /api/books/search?query={query}`
-- Calls the OpenLibrary API and returns a list of matching books.
+- This is your internal endpoint. It must internally call the OpenLibrary API using **FeignClient** or **RestTemplate**, map the response, and return the results to the client.
 - Results are **not** persisted — this is a live search only.
 
 ### 2. Save a Book
